@@ -7,7 +7,7 @@ export const lesson = {
       "loader 是 webpack 的模块转换管线。当你 import './styles.css' 时，浏览器并不知道 JavaScript 里为什么能导入 CSS；是 css-loader 先把 CSS 解析成模块，再由 style-loader 或 MiniCssExtractPlugin.loader 决定如何把 CSS 放进页面。",
       "loader 的执行顺序是从右到左、从下到上。use: ['style-loader', 'css-loader'] 代表 css-loader 先运行，style-loader 后运行。这个顺序非常重要，尤其是 Sass、PostCSS、Babel 等链式转换。",
       "开发环境常用 style-loader，因为它能把样式注入到 style 标签，并配合热更新快速反馈。生产环境更常用 MiniCssExtractPlugin，它会输出独立 CSS 文件，让浏览器并行下载和缓存样式。",
-      "webpack 5 内置 Asset Modules，可以用 asset/resource、asset/inline、asset/source 和 asset 自动处理图片、字体、SVG、ICO 等资源。这个项目用 asset/resource 把资源复制到输出目录，并返回最终 URL。"
+      "webpack 5 内置 Asset Modules，可以用 asset/resource、asset/inline、asset/source 和 asset 自动处理图片、字体、SVG、ICO 等资源。"
     ],
     keyPoints: [
       "loader 让非 JS 资源进入依赖图",
