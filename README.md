@@ -1,6 +1,6 @@
 # Webpack Practice Lab
 
-一个基于 Webpack 5 的学习项目。
+一个 Webpack 5 的学习项目。
 
 ## 在线预览
 
