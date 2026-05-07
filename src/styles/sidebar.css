@@ -1,0 +1,295 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 18px;
+  height: 100vh;
+  padding: 28px 18px;
+  overflow: hidden;
+  color: #f8fafc;
+  background: linear-gradient(180deg, #2b3a42 0%, #244c63 100%);
+}
+
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 6px;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+}
+
+.brand p,
+.brand strong {
+  display: block;
+  margin: 0;
+}
+
+.brand p {
+  color: #c7d7e8;
+  font-size: 0.8rem;
+}
+
+.brand strong {
+  font-size: 1.25rem;
+}
+
+.progress-panel {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #d8e7f2;
+  font-size: 0.9rem;
+}
+
+.progress-copy strong {
+  color: #ffffff;
+}
+
+.progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5ec7b8, #f0b35a);
+  transition: width 180ms ease;
+}
+
+.lesson-nav {
+  display: grid;
+  gap: 8px;
+  min-height: 0;
+  margin-right: -14px;
+  padding-right: 14px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(216, 231, 242, 0.42) transparent;
+  scrollbar-width: thin;
+}
+
+.lesson-nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lesson-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lesson-nav::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(216, 231, 242, 0.42);
+  background-clip: content-box;
+}
+
+.lesson-picker {
+  position: relative;
+  display: none;
+}
+
+.lesson-picker-trigger {
+  display: grid;
+  grid-template-columns: 1fr 18px;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  color: #edf6ff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lesson-picker-trigger:focus {
+  outline: 2px solid #9ed4c9;
+  outline-offset: 2px;
+}
+
+.lesson-picker-trigger span:first-child {
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson-picker-trigger span:last-child {
+  width: 0;
+  height: 0;
+  justify-self: center;
+  border-top: 8px solid #d8e7f2;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.lesson-picker-menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  display: none;
+  max-height: min(320px, 60vh);
+  padding: 8px;
+  overflow: auto;
+  border: 1px solid rgba(28, 39, 51, 0.16);
+  border-radius: 8px;
+  background: #c6d4dc;
+  box-shadow: 0 18px 36px rgba(16, 24, 40, 0.2);
+}
+
+.lesson-picker-menu.is-open {
+  display: grid;
+  gap: 2px;
+}
+
+.lesson-picker-option {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 0 10px 0 8px;
+  color: #101828;
+  text-align: left;
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.lesson-picker-option:hover,
+.lesson-picker-option.is-active {
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.lesson-picker-option > span:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.picker-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.lesson-picker-option small {
+  color: #475467;
+  font-size: 0.78rem;
+}
+
+.lesson-link {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 22px;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  min-height: 74px;
+  padding: 10px;
+  color: #edf6ff;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.lesson-link:hover,
+.lesson-link.is-active {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lesson-number {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: #2b3a42;
+  border-radius: 8px;
+  background: #d8edf8;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.lesson-details {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.lesson-link small {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: #9ed4c9;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.lesson-title {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: #edf6ff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-state {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #475467;
+  line-height: 1;
+  border-radius: 50%;
+  background: #9ed4c9;
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Webpack Practice Lab",
+  "short_name": "Webpack Lab",
+  "description": "一个以 webpack 最新版本搭建的前端工程化学习实验室。",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2b3a42",
+  "background_color": "#f6f8fb",
+  "display": "standalone"
+}
