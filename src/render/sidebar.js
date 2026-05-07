@@ -13,8 +13,8 @@ export function renderSidebar({ lessons, activeLesson, progress, isLessonPickerO
         <div class="brand">
           <img src="icons/icon-192.png" alt="webpack logo" />
           <div>
-            <strong>Webpack</strong>
-            <p>Practice Lab</p>
+            <strong>Webpack Practice Lab</strong>
+            <p>一个 Webpack 5 的学习项目</p>
           </div>
         </div>
 
